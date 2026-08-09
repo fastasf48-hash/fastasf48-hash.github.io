@@ -60,6 +60,12 @@ Any static host works equally well: drag the folder onto
 - **Résumé** — replace the PDF in `assets/` with the same filename and the
   download buttons keep working.
 
+> **After editing CSS or JS, bump the `?v=` number** on the `<link>` and
+> `<script>` tags in `index.html`. GitHub Pages serves assets with
+> `Cache-Control: max-age=600`, so without the bump a browser that already
+> visited the site keeps showing the old stylesheet and it looks like the change
+> never deployed.
+
 ## Notes
 
 - Dark theme by default; the toggle persists the choice in `localStorage`.
