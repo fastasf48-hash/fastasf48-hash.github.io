@@ -68,7 +68,7 @@ Any static host works equally well: drag the folder onto
 
 ## Notes
 
-- Dark theme by default; the toggle persists the choice in `localStorage`.
+- Light theme by default; the toggle persists the choice in `localStorage`.
 - Fully responsive down to 390px, with a mobile nav drawer.
 - Honours `prefers-reduced-motion` — every animation is disabled for users who
   ask for that.
