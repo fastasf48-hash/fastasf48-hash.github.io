@@ -224,7 +224,7 @@
 
     function accent() {
       return document.documentElement.getAttribute('data-theme') === 'light'
-        ? '2,132,199' : '52,227,155';
+        ? '212,20,28' : '255,59,48';
     }
 
     function frame() {
@@ -421,7 +421,7 @@
     'Playwright · Python · Pytest · Selenium · CI/CD\n\n' +
     'github.com/fastasf48-hash\nfastasf48@gmail.com\n\n' +
     'Poking around the console? You\'re exactly the kind of person I want to work with.',
-    'color:#34e39b;font-size:15px;font-weight:700',
-    'color:#a8b4c8;font-size:12px;line-height:1.6'
+    'color:#2fd671;font-size:15px;font-weight:700',
+    'color:#b0b0b6;font-size:12px;line-height:1.6'
   );
 })();

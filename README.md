@@ -46,8 +46,11 @@ Any static host works equally well: drag the folder onto
 ## Editing
 
 - **Text** — all copy lives in `index.html`, in plain HTML, section by section.
-- **Colours** — the `:root` block at the top of `style.css`. `--acc` is the green,
-  `--acc-2` cyan, `--acc-3` violet. Light-theme overrides sit right below.
+- **Colours** — the `:root` block at the top of `style.css`. The palette is black,
+  white and red: `--acc` is the signature red, `--acc-2` a softer red, `--acc-3`
+  white. `--pass` is the one green in the design and is reserved for "passing"
+  signals only — tick bullets, the availability dot, terminal output, the DB tag.
+  Light-theme overrides sit right below.
 - **The terminal animation** — the `script` array in the `terminal()` function in
   `main.js`. Keep lines under ~45 characters so they don't wrap.
 - **The architecture explorer** — each folder is a `<button class="node">` in
