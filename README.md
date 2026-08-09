@@ -46,11 +46,12 @@ Any static host works equally well: drag the folder onto
 ## Editing
 
 - **Text** — all copy lives in `index.html`, in plain HTML, section by section.
-- **Colours** — the `:root` block at the top of `style.css`. The palette is black,
-  white and red: `--acc` is the signature red, `--acc-2` a softer red, `--acc-3`
-  white. `--pass` is the one green in the design and is reserved for "passing"
-  signals only — tick bullets, the availability dot, terminal output, the DB tag.
-  Light-theme overrides sit right below.
+- **Colours** — the `:root` block at the top of `style.css`. Deep ink base with a
+  single emerald→cyan accent: `--acc` is the emerald (which doubles as the
+  "passing" signal, via the `--pass` alias), `--acc-2` the cyan that closes the
+  gradient. `--acc-3` is violet and is deliberately reserved for the AI project
+  only — badge, glow, DB tag — so it reads as "this one is different" rather than
+  as decoration. Light-theme overrides sit right below.
 - **The terminal animation** — the `script` array in the `terminal()` function in
   `main.js`. Keep lines under ~45 characters so they don't wrap.
 - **The architecture explorer** — each folder is a `<button class="node">` in
