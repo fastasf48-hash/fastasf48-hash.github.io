@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rahul Sharma — Automation Engineer | Playwright · Python · Pytest</title>
+<meta name="description" content="Rahul Sharma — Automation Engineer with 4+ years in QA. I design Playwright + Python + Pytest frameworks covering UI, API and database layers, wired into Jenkins and GitHub Actions CI/CD." />
+<meta name="author" content="Rahul Sharma" />
+<meta name="theme-color" content="#080b12" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Rahul Sharma — Automation Engineer" />
+<meta property="og:description" content="Playwright · Python · Pytest · Selenium · CI/CD. Frameworks built for UI, API and DB layers — architected, documented, and shipped." />
+<meta property="og:image" content="assets/img/rahul-formal.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23080b12'/%3E%3Cpath d='M25 52l16 16 34-34' stroke='%2334e39b' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<a href="#hero" class="skip-link">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="brand" aria-label="Rahul Sharma — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><path d="M25 52l16 16 34-34" /></svg>
+      </span>
+      <span class="brand__text">rahul<span class="dot">.</span>sharma</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Section navigation">
+      <a href="#about" data-nav>About</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#framework" data-nav>Framework</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#education" data-nav>Education</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Toggle theme">
+        <svg class="ico-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24"><path d="M20.5 14.6A8.6 8.6 0 019.4 3.5a8.6 8.6 0 1011.1 11.1z"/></svg>
+      </button>
+      <a class="btn btn--sm btn--primary" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf" download>
+        <svg viewBox="0 0 24 24" class="btn__ico"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 17.5V19a2 2 0 002 2h12a2 2 0 002-2v-1.5"/></svg>
+        Résumé
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__left">
+      <p class="eyebrow reveal">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Automation Engineer · Chandigarh, India
+      </p>
+
+      <h1 class="hero__title reveal">
+        <span class="line">Rahul</span>
+        <span class="line grad">Sharma</span>
+      </h1>
+
+      <p class="hero__role reveal">
+        <span class="hero__role-static">I build</span>
+        <span class="typed" id="typed"></span><span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero__lede reveal">
+        4+ years in software quality — one year finding bugs by hand, three-plus years making sure
+        a machine finds them first. I design <strong>Playwright + Python + Pytest</strong> frameworks
+        that cover UI, API and database layers in a single repository, and wire them into
+        Jenkins and GitHub Actions so every merge request gets an answer in minutes.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a href="#framework" class="btn btn--primary magnetic">
+          Explore my framework
+          <svg viewBox="0 0 24 24" class="btn__ico"><path d="M5 12h14m0 0l-5.5-5.5M19 12l-5.5 5.5"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost magnetic">Get in touch</a>
+      </div>
+
+      <ul class="hero__socials reveal" aria-label="Social links">
+        <li><a href="https://github.com/fastasf48-hash" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" class="social-ico"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0112 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0012 2z" fill="currentColor" stroke="none"/></svg>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/rahul-sharma-65093b1b9" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" class="social-ico"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.2 1.46-2.2 2.97V21h-4z" fill="currentColor" stroke="none"/></svg>
+        </a></li>
+        <li><a href="mailto:fastasf48@gmail.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" class="social-ico"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>
+        </a></li>
+        <li><a href="tel:+917807232349" title="Phone" aria-label="Phone">
+          <svg viewBox="0 0 24 24" class="social-ico"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 006.5 6.5l1.5-2 4 1.5v3a2 2 0 01-2.2 2A17 17 0 014.5 5.2 2 2 0 016.5 3z"/></svg>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="hero__right">
+      <div class="portrait reveal">
+        <div class="portrait__frame">
+          <img src="assets/img/rahul-casual.jpg" alt="Portrait of Rahul Sharma" width="900" height="1200" />
+          <div class="portrait__scan" aria-hidden="true"></div>
+        </div>
+        <div class="portrait__badge portrait__badge--top">
+          <span class="tick" aria-hidden="true">✓</span> Open to opportunities
+        </div>
+        <div class="portrait__badge portrait__badge--bottom">
+          <strong>4+</strong> yrs in QA &amp; automation
+        </div>
+      </div>
+
+      <div class="terminal reveal" id="terminal">
+        <div class="terminal__bar">
+          <span class="tdot tdot--r"></span><span class="tdot tdot--y"></span><span class="tdot tdot--g"></span>
+          <span class="terminal__title">bash — pytest</span>
+          <button class="terminal__replay" id="terminalReplay" type="button" title="Re-run">↻ run</button>
+        </div>
+        <pre class="terminal__body" id="terminalBody" aria-live="polite"></pre>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+    <span class="scroll-hint__mouse"><span></span></span>
+    <span class="scroll-hint__txt">scroll</span>
+  </a>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Key numbers">
+  <div class="container stats__grid">
+    <div class="stat reveal"><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__lbl">Years in software QA</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="3" data-suffix="+">0</span><span class="stat__lbl">Years in automation</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="98" data-suffix="%">0</span><span class="stat__lbl">Defect detection rate</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="3" data-suffix="">0</span><span class="stat__lbl">Test layers: UI · API · DB</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="2" data-suffix="×">0</span><span class="stat__lbl">Outstanding Performer awards</span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">01 — About</span>
+      <h2 class="sec-title">From finding bugs by hand<br />to making <span class="grad">machines find them first</span></h2>
+    </header>
+
+    <div class="about">
+      <div class="about__media reveal">
+        <div class="about__photo">
+          <img src="assets/img/rahul-formal.jpg" alt="Rahul Sharma, professional portrait" width="900" height="900" loading="lazy" />
+        </div>
+        <div class="about__sig">
+          <span class="about__sig-name">Rahul Sharma</span>
+          <span class="about__sig-role">Software Engineer II · Alert Enterprise</span>
+        </div>
+      </div>
+
+      <div class="about__body">
+        <p class="reveal">
+          I started my career in the security domain, validating enterprise
+          <strong>Physical Identity &amp; Access Management (PIAM)</strong> systems on the
+          Alert Enterprise Guardian platform — functional, regression, integration and database
+          testing across workflows built on Apache NiFi, ZooKeeper, Tomcat and Microsoft SQL Server.
+          That year of manual testing is still the most useful thing I own: it taught me
+          <em>what</em> to automate before I learned <em>how</em>.
+        </p>
+        <p class="reveal">
+          Then I moved into automation properly — first Selenium with Java, now Playwright with
+          Python and Pytest. Today I lead the migration of a legacy Selenium suite for
+          <strong>Airport Guardian</strong> onto a modern Playwright stack, cutting execution time
+          and killing the flaky failures that made the old suite easy to ignore.
+        </p>
+        <p class="reveal">
+          What I actually care about is <strong>framework architecture</strong>: the shape of a
+          codebase that lets ten more tests get written next sprint without ten more places for
+          things to break. Page objects that isolate the DOM. Fixtures scoped to their real blast
+          radius. Config that comes from files, never from a hard-coded string. And documentation
+          thorough enough that someone else can extend it without asking me a single question.
+        </p>
+
+        <ul class="facts">
+          <li class="reveal"><span class="facts__k">Currently</span><span class="facts__v">Software Engineer II — Alert Enterprise, Chandigarh</span></li>
+          <li class="reveal"><span class="facts__k">Core stack</span><span class="facts__v">Playwright · Python · Pytest · Selenium · Java · SQL</span></li>
+          <li class="reveal"><span class="facts__k">Domain</span><span class="facts__v">Enterprise security / PIAM · Airport access control</span></li>
+          <li class="reveal"><span class="facts__k">Also does</span><span class="facts__v">Mentors QA engineers on Python, Pytest &amp; Playwright</span></li>
+          <li class="reveal"><span class="facts__k">Education</span><span class="facts__v">B.Tech Computer Science — 8.1 CGPA (2022)</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section section--alt" id="experience">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">02 — Experience</span>
+      <h2 class="sec-title">Four years at one company,<br />two very different <span class="grad">jobs</span></h2>
+      <p class="sec-sub">Alert Enterprise · Chandigarh, India — a global leader in converged physical &amp; cyber identity security.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="tl reveal">
+        <div class="tl__marker"><span class="tl__pulse"></span></div>
+        <div class="tl__card tilt">
+          <div class="tl__top">
+            <div>
+              <h3 class="tl__role">Software Engineer II</h3>
+              <p class="tl__org">Alert Enterprise — Chandigarh, IN</p>
+            </div>
+            <span class="tl__date tl__date--now">Jul 2024 — Present</span>
+          </div>
+          <ul class="tl__list">
+            <li><strong>Leading the Selenium → Playwright migration</strong> for Airport Guardian, moving a legacy Java suite onto Playwright + Python + Pytest — faster execution, dramatically fewer flaky failures.</li>
+            <li>Designed the modular framework itself: <strong>Page Object Model</strong>, pytest fixtures and parameterization, so UI and API suites share one reusable, maintainable spine.</li>
+            <li>Built API coverage with <strong>Requests, jsonschema and Faker</strong> — request/response and schema validation, plus data-driven cases fed by dynamically generated test data.</li>
+            <li>Integrated regression and API suites into <strong>Jenkins CI/CD</strong>, giving every merge request continuous testing and fast feedback.</li>
+            <li>Implemented <strong>SQLAlchemy</strong>-based database checks to verify backend data integrity inside end-to-end scenarios.</li>
+            <li>Introduced structured <strong>HTML / Allure reporting</strong> and logging, so test-run health became visible to cross-functional stakeholders instead of living in a console.</li>
+            <li><strong>Mentored QA engineers</strong> on Python, Pytest and Playwright fundamentals, accelerating the team's move to modern automation.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Playwright</span><span class="chip">Python</span><span class="chip">Pytest</span>
+            <span class="chip">Jenkins</span><span class="chip">SQLAlchemy</span><span class="chip">Allure</span>
+            <span class="chip">jsonschema</span><span class="chip">Faker</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl reveal">
+        <div class="tl__marker"></div>
+        <div class="tl__card tilt">
+          <div class="tl__top">
+            <div>
+              <h3 class="tl__role">Software Engineer I</h3>
+              <p class="tl__org">Alert Enterprise — Chandigarh, IN</p>
+            </div>
+            <span class="tl__date">Jan 2022 — Jun 2024</span>
+          </div>
+          <ul class="tl__list">
+            <li>Achieved a <strong>98% defect detection rate</strong> on Airport Guardian through meticulous test design and execution across enterprise PIAM workflows (Apache NiFi, ZooKeeper, Tomcat, MS SQL Server).</li>
+            <li>Developed <strong>Selenium</strong> automation covering critical regression scenarios, cutting manual effort and testing-cycle duration significantly — by <strong>100% in several cases</strong>.</li>
+            <li>Streamlined testing processes with cross-functional teams, shortening product release cycles.</li>
+            <li>Partnered directly with customers to fold their feedback into the QA process, raising customer confidence.</li>
+            <li>Ran training sessions for customer support teams on QA processes, <strong>reducing customer-reported incidents by 30%</strong>.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Selenium</span><span class="chip">Java</span><span class="chip">MS SQL Server</span>
+            <span class="chip">Apache NiFi</span><span class="chip">ZooKeeper</span><span class="chip">Tomcat</span>
+            <span class="chip">JIRA</span><span class="chip">Agile / Scrum</span>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">03 — Skills</span>
+      <h2 class="sec-title">The toolkit, and how deep <span class="grad">each one goes</span></h2>
+      <p class="sec-sub">Not a wall of logos — this is what I actually use, grouped the way I actually think about it.</p>
+    </header>
+
+    <div class="meters reveal">
+      <div class="meter"><div class="meter__top"><span>Playwright + Pytest</span><span class="meter__pct">95%</span></div><div class="meter__track"><i style="--w:95%"></i></div></div>
+      <div class="meter"><div class="meter__top"><span>Python</span><span class="meter__pct">92%</span></div><div class="meter__track"><i style="--w:92%"></i></div></div>
+      <div class="meter"><div class="meter__top"><span>API automation &amp; validation</span><span class="meter__pct">90%</span></div><div class="meter__track"><i style="--w:90%"></i></div></div>
+      <div class="meter"><div class="meter__top"><span>Framework architecture &amp; POM</span><span class="meter__pct">90%</span></div><div class="meter__track"><i style="--w:90%"></i></div></div>
+      <div class="meter"><div class="meter__top"><span>SQL &amp; database validation</span><span class="meter__pct">85%</span></div><div class="meter__track"><i style="--w:85%"></i></div></div>
+      <div class="meter"><div class="meter__top"><span>CI/CD — Jenkins &amp; GitHub Actions</span><span class="meter__pct">85%</span></div><div class="meter__track"><i style="--w:85%"></i></div></div>
+      <div class="meter"><div class="meter__top"><span>Selenium + Java</span><span class="meter__pct">80%</span></div><div class="meter__track"><i style="--w:80%"></i></div></div>
+    </div>
+
+    <div class="skill-grid">
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">&lt;/&gt;</div>
+        <h3>Languages</h3>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">SQL</span></div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">◈</div>
+        <h3>Automation frameworks</h3>
+        <div class="chips">
+          <span class="chip">Playwright</span><span class="chip">Selenium WebDriver</span><span class="chip">Pytest</span>
+          <span class="chip">TestNG</span><span class="chip">Fixtures</span><span class="chip">Markers</span>
+          <span class="chip">Parameterization</span><span class="chip">Page Object Model</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">⇄</div>
+        <h3>API testing</h3>
+        <div class="chips">
+          <span class="chip">APIRequestContext</span><span class="chip">Requests</span><span class="chip">jsonschema</span>
+          <span class="chip">Faker</span><span class="chip">pytest-playwright</span><span class="chip">REST validation</span>
+          <span class="chip">Basic / Bearer auth</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">⟳</div>
+        <h3>CI/CD &amp; tooling</h3>
+        <div class="chips">
+          <span class="chip">Jenkins</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span>
+          <span class="chip">Git / GitHub</span><span class="chip">JIRA</span><span class="chip">Allure</span><span class="chip">pytest-html</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">▤</div>
+        <h3>Database</h3>
+        <div class="chips">
+          <span class="chip">MS SQL Server</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
+          <span class="chip">SQLite</span><span class="chip">SQLAlchemy</span><span class="chip">Parameterized queries</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">⛨</div>
+        <h3>Enterprise platforms</h3>
+        <div class="chips">
+          <span class="chip">Alert Enterprise Guardian (PIAM)</span><span class="chip">Apache NiFi</span>
+          <span class="chip">Apache ZooKeeper</span><span class="chip">Tomcat</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">✳</div>
+        <h3>Concepts</h3>
+        <div class="chips">
+          <span class="chip">SDLC</span><span class="chip">Agile / Scrum</span><span class="chip">OOP</span>
+          <span class="chip">DSA</span><span class="chip">Data-driven testing</span><span class="chip">Keyword-driven testing</span>
+          <span class="chip">Logging &amp; debugging</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal tilt">
+        <div class="skill-card__ico">⚙</div>
+        <h3>Environment &amp; config</h3>
+        <div class="chips">
+          <span class="chip">JSON</span><span class="chip">YAML</span><span class="chip">CSV</span>
+          <span class="chip">.ini / .env</span><span class="chip">venv</span><span class="chip">pip</span><span class="chip">Excel (openpyxl)</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLAGSHIP FRAMEWORK ============ -->
+<section class="section section--alt" id="framework">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">04 — Flagship</span>
+      <h2 class="sec-title">The Playwright + Pytest<br /><span class="grad">automation framework</span></h2>
+      <p class="sec-sub">
+        One repository, three test layers, zero hard-coded values. Below is the actual architecture —
+        why every folder exists, what makes it hold up under load, and the real bugs I hit building it.
+      </p>
+      <div class="sec-actions">
+        <a class="btn btn--primary magnetic" href="https://github.com/fastasf48-hash/playwright-pytest-automation-framework" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="btn__ico"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0112 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0012 2z" fill="currentColor" stroke="none"/></svg>
+          View the repository
+        </a>
+      </div>
+    </header>
+
+    <!-- three layers -->
+    <div class="layers">
+      <article class="layer reveal tilt">
+        <span class="layer__tag layer__tag--ui">UI</span>
+        <h3>Browser journeys</h3>
+        <p>Full purchase flow, off-site navigation and a catalogue crawl — driven entirely through page objects, with a URL or text assertion after <em>every</em> step.</p>
+        <ul class="ticks">
+          <li>6 page objects, all inheriting one <code>BasePage</code></li>
+          <li>Data-driven login: valid, locked-out, wrong password</li>
+          <li>Credentials from Excel, form data from Faker</li>
+        </ul>
+      </article>
+
+      <article class="layer reveal tilt">
+        <span class="layer__tag layer__tag--api">API</span>
+        <h3>No browser needed</h3>
+        <p>Playwright's own <code>APIRequestContext</code> — a complete CRUD lifecycle plus auth, headers, cookies and JSON Schema validation, with no <code>requests</code> dependency at all.</p>
+        <ul class="ticks">
+          <li>Create → read → update → patch → delete → 404</li>
+          <li>Basic auth &amp; Bearer token flows</li>
+          <li>Schema validation catches type drift, not just values</li>
+        </ul>
+      </article>
+
+      <article class="layer reveal tilt">
+        <span class="layer__tag layer__tag--db">DB</span>
+        <h3>Backend truth</h3>
+        <p>The layer most portfolios skip. A thin, driver-agnostic <code>DBUtility</code> wrapper proves the UI told the truth — and swaps to Postgres by changing one constructor.</p>
+        <ul class="ticks">
+          <li>Parameterized queries only — injection-proof by design</li>
+          <li><code>fetch_one</code> / <code>fetch_all</code> / <code>execute</code></li>
+          <li>Seeded from a script, so CI can rebuild it from scratch</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- why superior -->
+    <h3 class="sub-head reveal">Why this framework holds up</h3>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pillar__n">01</span>
+        <h4>One <code>BasePage</code>, not 40 try/except blocks</h4>
+        <p>Error handling and logging live in exactly one class. Every page object inherits <code>click</code>, <code>fill</code>, <code>assert_url</code> — so a change to how failures are logged is a one-file edit, not a repo-wide find-and-replace.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__n">02</span>
+        <h4>Environments are a flag, not a code change</h4>
+        <p><code>pytest --env dev|qa|prod</code>. An <code>EnvManager</code> reads <code>.env</code> and resolves the base URL once per session; every test follows automatically with zero test-code changes.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__n">03</span>
+        <h4>Fixture scope matches blast radius</h4>
+        <p>Four <code>conftest.py</code> files — root, ui, api, db. A browser fixture never loads for an API test that has no browser. Expensive things (API contexts, DB connection, resolved URL) are session-scoped; anything needing isolation is per-test.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__n">04</span>
+        <h4>Parallel-safe on purpose</h4>
+        <p><code>-n auto --dist loadgroup</code>. Dependent test chains are pinned to a single worker with <code>@pytest.mark.xdist_group</code> — a fix that came from a real parallel-only failure, not from theory.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__n">05</span>
+        <h4>Evidence only when it matters</h4>
+        <p>Screenshot, video and full trace are captured <em>retain-on-failure</em>, and a <code>pytest_runtest_makereport</code> hook attaches the failure screenshot straight into Allure — no hunting through folders.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__n">06</span>
+        <h4>Three ways to run it in CI</h4>
+        <p>GitHub Actions workflow, a Dockerfile built on Microsoft's official Playwright image, and a parameterised Jenkinsfile — all three seed their own data and publish their own reports.</p>
+      </article>
+    </div>
+
+    <!-- explorer -->
+    <h3 class="sub-head reveal">Walk the architecture</h3>
+    <p class="sub-lede reveal">Click any folder or file — this is the real tree, with the real reasoning.</p>
+
+    <div class="explorer reveal">
+      <div class="explorer__tree" role="tablist" aria-label="Project structure">
+        <div class="tree__root">PlayWright&nbsp;Framework/</div>
+        <button class="node is-active" role="tab" data-title="pages/ — the Page Object Model" data-icon="📁" data-desc="One class per screen. Locators are defined in __init__ and resolved lazily by Playwright; every other method performs an action or an assertion. Because everything inherits BasePage, a DOM change touches exactly one file and never leaks into a test." data-meta="base_page · login_page · home_page · cart_page · checkout_info_page · checkout_overview_page"><span class="node__ico">📁</span> pages/</button>
+        <button class="node" role="tab" data-title="tests/ — split by layer, not by feature" data-icon="📁" data-desc="Three sub-suites, each with its own conftest.py so fixtures never load where they aren't needed: ui/ for browser journeys, api/ for APIRequestContext calls with no browser at all, db/ for SQLite validations. Markers (smoke, regression, sanity, e2e, api, db) slice the suite along a second axis." data-meta="tests/ui · tests/api · tests/db"><span class="node__ico">📁</span> tests/</button>
+        <button class="node" role="tab" data-title="utilities/ — reusable, single-purpose classes" data-icon="📁" data-desc="Every utility is a class that knows how to fetch or produce data, or talk to exactly one external system. None of them hold test logic. That separation is why a test never reads a file directly and never knows which environment it's running against." data-meta="logger · config_reader · excel_utility · json_utility · random_data · env_manager · db_utility"><span class="node__ico">📁</span> utilities/</button>
+        <button class="node" role="tab" data-title="test_data/ — nothing hard-coded, ever" data-icon="📁" data-desc="Expected URLs in config.ini, credentials in an Excel workbook, API request bodies and the JSON Schema in test_data/api/, and a seeded SQLite database. Change a URL and it's a one-line edit in one file, not a grep across the suite." data-meta="config.ini · user_info.xlsx · app.db · api/*.json"><span class="node__ico">📁</span> test_data/</button>
+        <button class="node" role="tab" data-title="conftest.py — the fixture spine" data-icon="🐍" data-desc="Registers the --env CLI flag, then overrides three pytest-playwright fixtures — base_url, browser_type_launch_args, browser_context_args — merging custom behaviour on top of the plugin's defaults rather than replacing them. It also holds the makereport hook that attaches a screenshot to Allure on failure." data-meta="pytest_addoption · base_url · launch args · context args · makereport hook"><span class="node__ico">🐍</span> conftest.py</button>
+        <button class="node" role="tab" data-title="pytest.ini — the run policy" data-icon="⚙️" data-desc="One file decides how every run behaves: browser choice, retain-on-failure screenshots/video/tracing, HTML + Allure report paths, one automatic rerun with a 2s delay for transient flakiness, parallel workers with -n auto --dist loadgroup, and the registered marker list." data-meta="addopts · markers · testpaths · filterwarnings"><span class="node__ico">⚙️</span> pytest.ini</button>
+        <button class="node" role="tab" data-title="scripts/ — regeneratable data, on demand" data-icon="📁" data-desc="Anything gitignored because it's generated has a script that rebuilds it: generate_test_data.py builds the Excel workbook, generate_db.py seeds the SQLite database. publish_clean.py is the interesting one — it tokenizes every .py file in a disposable git worktree to strip comments before publishing, leaving local history untouched." data-meta="generate_test_data · generate_db · publish_clean"><span class="node__ico">📁</span> scripts/</button>
+        <button class="node" role="tab" data-title=".github/workflows/playwright.yml" data-icon="🚀" data-desc="Runs on every push and pull request to main: checkout, Python 3.11, install dependencies plus browser binaries with --with-deps, seed the SQLite database, run the smoke suite across chromium, firefox and webkit, then upload the HTML and Allure artifacts with if: always() — because a failed run is exactly when you need the report." data-meta="push · pull_request · matrix: chromium / firefox / webkit"><span class="node__ico">🚀</span> .github/workflows/</button>
+        <button class="node" role="tab" data-title="Dockerfile &amp; Jenkinsfile" data-icon="🐳" data-desc="The Dockerfile builds on mcr.microsoft.com/playwright/python, which already ships every OS-level browser dependency, and installs requirements before copying source so Docker's layer cache actually helps. The Jenkinsfile exposes ENV and MARKER as build parameters, so one pipeline definition covers every environment/suite combination." data-meta="layer caching · parameterised builds · publishHTML"><span class="node__ico">🐳</span> Dockerfile · Jenkinsfile</button>
+      </div>
+
+      <div class="explorer__panel" id="explorerPanel" role="tabpanel" aria-live="polite">
+        <div class="epanel__head"><span class="epanel__ico">📁</span><h4 class="epanel__title">pages/ — the Page Object Model</h4></div>
+        <p class="epanel__desc">One class per screen. Locators are defined in <code>__init__</code> and resolved lazily by Playwright; every other method performs an action or an assertion. Because everything inherits <code>BasePage</code>, a DOM change touches exactly one file and never leaks into a test.</p>
+        <div class="epanel__meta">base_page · login_page · home_page · cart_page · checkout_info_page · checkout_overview_page</div>
+      </div>
+    </div>
+
+    <!-- code tabs -->
+    <h3 class="sub-head reveal">Code that does the work</h3>
+    <div class="code-block reveal">
+      <div class="code-tabs" role="tablist">
+        <button class="ctab is-active" role="tab" data-code="c1">base_page.py</button>
+        <button class="ctab" role="tab" data-code="c2">conftest.py</button>
+        <button class="ctab" role="tab" data-code="c3">test_login_data_driven.py</button>
+        <button class="ctab" role="tab" data-code="c4">pytest.ini</button>
+      </div>
+      <div class="code-panes">
+<pre class="cpane is-active" id="c1"><code><span class="c"># every page object inherits this — error handling exists in ONE place</span>
+<span class="k">class</span> <span class="t">BasePage</span>:
+    <span class="k">def</span> <span class="f">__init__</span>(<span class="v">self</span>, page: <span class="t">Page</span>):
+        <span class="v">self</span>.page = page
+
+    <span class="k">def</span> <span class="f">click</span>(<span class="v">self</span>, locator: <span class="t">Locator</span>, description: <span class="t">str</span> = <span class="s">""</span>) -> <span class="k">None</span>:
+        <span class="k">try</span>:
+            locator.<span class="f">click</span>()
+            logger.<span class="f">info</span>(<span class="s">f"Clicked on {description or locator}"</span>)
+        <span class="k">except</span> <span class="t">Exception</span> <span class="k">as</span> exc:
+            logger.<span class="f">error</span>(<span class="s">f"Failed to click {description}: {exc}"</span>)
+            <span class="k">raise</span>
+
+    <span class="k">def</span> <span class="f">assert_url</span>(<span class="v">self</span>, expected_url: <span class="t">str</span>) -> <span class="k">None</span>:
+        <span class="c"># auto-retrying assertion — survives a navigation that hasn't landed yet</span>
+        <span class="f">expect</span>(<span class="v">self</span>.page).<span class="f">to_have_url</span>(expected_url)</code></pre>
+
+<pre class="cpane" id="c2"><code><span class="c"># override pytest-playwright's own fixtures — merge, don't replace</span>
+<span class="d">@pytest.fixture</span>(scope=<span class="s">"session"</span>)
+<span class="k">def</span> <span class="f">base_url</span>(pytestconfig) -> <span class="t">str</span>:
+    env = pytestconfig.<span class="f">getoption</span>(<span class="s">"--env"</span>)
+    <span class="k">return</span> <span class="t">EnvManager</span>.<span class="f">get_base_url</span>(env)
+
+<span class="d">@pytest.fixture</span>(scope=<span class="s">"function"</span>)
+<span class="k">def</span> <span class="f">browser_context_args</span>(browser_context_args, base_url):
+    <span class="c"># the parameter resolves to the PLUGIN's fixture, so this layers on top</span>
+    <span class="k">return</span> {**browser_context_args, <span class="s">"base_url"</span>: base_url, <span class="s">"no_viewport"</span>: <span class="k">True</span>}
+
+<span class="d">@pytest.hookimpl</span>(hookwrapper=<span class="k">True</span>)
+<span class="k">def</span> <span class="f">pytest_runtest_makereport</span>(item, call):
+    outcome = <span class="k">yield</span>
+    report = outcome.<span class="f">get_result</span>()
+    <span class="k">if</span> report.when == <span class="s">"call"</span> <span class="k">and</span> report.failed:
+        page = item.funcargs.<span class="f">get</span>(<span class="s">"page"</span>)          <span class="c"># None for API/DB tests</span>
+        <span class="k">if</span> page:
+            allure.<span class="f">attach</span>(page.<span class="f">screenshot</span>(), name=<span class="s">"failure"</span>)</code></pre>
+
+<pre class="cpane" id="c3"><code><span class="c"># one test function, three real scenarios — positive AND negative</span>
+<span class="d">@pytest.mark.sanity</span>
+<span class="d">@pytest.mark.parametrize</span>(
+    <span class="s">"username, password, expect_success"</span>,
+    [
+        (<span class="s">"standard_user"</span>,   <span class="s">"secret_sauce"</span>, <span class="k">True</span>),
+        (<span class="s">"locked_out_user"</span>, <span class="s">"secret_sauce"</span>, <span class="k">False</span>),
+        (<span class="s">"standard_user"</span>,   <span class="s">"wrong_pass"</span>,   <span class="k">False</span>),
+    ],
+)
+<span class="k">def</span> <span class="f">test_login_scenarios</span>(<span class="v">self</span>, username, password, expect_success):
+    <span class="v">self</span>.login_page.<span class="f">login_to_application</span>(username, password)
+    <span class="k">if</span> expect_success:
+        <span class="v">self</span>.login_page.<span class="f">verify_dashboard_url</span>()
+    <span class="k">else</span>:
+        <span class="k">assert</span> <span class="v">self</span>.login_page.<span class="f">get_error_message</span>()</code></pre>
+
+<pre class="cpane" id="c4"><code><span class="t">[pytest]</span>
+testpaths = tests
+
+addopts =
+    --browser chromium
+    --screenshot only-on-failure     <span class="c"># evidence, only when it matters</span>
+    --video retain-on-failure
+    --tracing retain-on-failure
+    --html=reports/html-report/report.html --self-contained-html
+    --alluredir=reports/allure-results
+    --reruns <span class="n">1</span> --reruns-delay <span class="n">2</span>       <span class="c"># catch a blip, not a real bug</span>
+    -n auto --dist loadgroup         <span class="c"># parallel, but group-aware</span>
+    -ra
+
+markers =
+    smoke: critical-path checks that run on every push
+    regression: broader coverage
+    sanity: focused data-driven checks
+    e2e: full end-to-end journeys
+    api: APIRequestContext tests
+    db: database validations</code></pre>
+      </div>
+    </div>
+
+    <!-- CI pipeline -->
+    <h3 class="sub-head reveal">Every push runs the pipeline</h3>
+    <div class="pipeline reveal">
+      <div class="pipe__track" aria-hidden="true"><span class="pipe__pulse"></span></div>
+      <div class="pipe__nodes">
+        <div class="pnode"><span class="pnode__ico">⑂</span><strong>Push / PR</strong><small>to main</small></div>
+        <div class="pnode"><span class="pnode__ico">⬇</span><strong>Checkout</strong><small>Python 3.11</small></div>
+        <div class="pnode"><span class="pnode__ico">◫</span><strong>Install</strong><small>deps + browsers</small></div>
+        <div class="pnode"><span class="pnode__ico">▤</span><strong>Seed DB</strong><small>generate_db.py</small></div>
+        <div class="pnode"><span class="pnode__ico">▶</span><strong>Smoke suite</strong><small>chromium · firefox · webkit</small></div>
+        <div class="pnode"><span class="pnode__ico">⬆</span><strong>Artifacts</strong><small>HTML + Allure, always</small></div>
+      </div>
+    </div>
+
+    <!-- bugs -->
+    <h3 class="sub-head reveal">Real bugs I hit — and how I found them</h3>
+    <p class="sub-lede reveal">The most honest part of any project. These weren't designed in; they were debugged out.</p>
+
+    <div class="accordion reveal">
+      <details class="acc" open>
+        <summary><span class="acc__tag acc__tag--red">CI</span> <span class="acc__t">“no such table: users” — the very first CI run failed</span><span class="acc__chev">▾</span></summary>
+        <div class="acc__body">
+          <p><strong>Symptom.</strong> The first GitHub Actions run after the initial push went red. <code>gh run view --log-failed</code> showed <code>sqlite3.OperationalError: no such table: users</code>.</p>
+          <p><strong>Root cause.</strong> <code>test_data/app.db</code> is correctly gitignored — it's generated data, not source. But a fresh checkout is exactly what every CI run <em>is</em>, so <code>sqlite3.connect()</code> silently created a brand-new empty database and the first query blew up.</p>
+          <p><strong>Fix.</strong> A seed step before the test step — in all three places that run this suite from a clean checkout: the Actions workflow, the Dockerfile's <code>CMD</code>, and the Jenkinsfile.</p>
+          <p class="acc__lesson"><strong>Lesson.</strong> Anything gitignored as “generated” needs an explicit generation step wired into every environment — not a manual step documented for a human to remember.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc__tag acc__tag--amber">Parallelism</span> <span class="acc__t">A test class that only broke when run in parallel</span><span class="acc__chev">▾</span></summary>
+        <div class="acc__body">
+          <p><strong>Symptom.</strong> Under <code>-n auto</code>, the booking lifecycle chain died with <code>AttributeError: type object 'TestBookingLifecycle' has no attribute 'booking_id'</code>. Serially, it passed every time.</p>
+          <p><strong>Root cause.</strong> <code>pytest-xdist</code> distributes tests across separate OS processes, which don't share memory. <code>test_01</code> stored the new booking id as a class attribute; when <code>test_04</code> landed on a different worker, that worker's copy of the class had never seen it.</p>
+          <p><strong>Fix.</strong> Two parts, both required: <code>@pytest.mark.xdist_group(name="booking_lifecycle")</code> on the class, <em>and</em> <code>--dist loadgroup</code> in <code>pytest.ini</code> — because the group marker is silently ignored under xdist's default scheduler.</p>
+          <p class="acc__lesson"><strong>Lesson.</strong> This was caught by running the suite in parallel while building it, not by reading the code. Code review alone would never have flagged it — the test passes perfectly in the single-worker case most people re-run to “confirm” a fix.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc__tag acc__tag--blue">Git</span> <span class="acc__t">History authored under two different identities</span><span class="acc__chev">▾</span></summary>
+        <div class="acc__body">
+          <p><strong>Symptom.</strong> <code>git log</code> showed most commits under the machine's global git identity, and one — made by editing the README in GitHub's web UI — under the actual account.</p>
+          <p><strong>Fix.</strong> Set <code>user.name</code> / <code>user.email</code> <em>without</em> <code>--global</code>, scoping the identity to this repo only; then rewrote existing commit metadata with <code>git filter-branch --env-filter</code>, and cleaned up the <code>refs/original/</code> backup refs afterwards.</p>
+          <p class="acc__lesson"><strong>Lesson.</strong> Every rewritten commit gets a new SHA, because the metadata is part of what the SHA hashes. That's safe on local-only history — and a very different, much riskier call on a shared branch. Knowing which situation you're in <em>is</em> the skill.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc__tag acc__tag--green">Craft</span> <span class="acc__t">Docstrings that read like a machine wrote them</span><span class="acc__chev">▾</span></summary>
+        <div class="acc__body">
+          <p><strong>Symptom.</strong> Docstrings across the codebase had grown into multi-sentence essays justifying design decisions inline — one class docstring spent five sentences defending an xdist decision.</p>
+          <p><strong>Fix.</strong> Rewrote every docstring across 16 files down to a single plain, present-tense sentence describing what the thing does. The reasoning didn't disappear — it moved to where it belongs: the architecture guide, and commit messages.</p>
+          <p class="acc__lesson"><strong>Lesson.</strong> Code documents <em>what</em>. Docs and commit history document <em>why</em>. Mixing the two makes both harder to read.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- practices -->
+    <h3 class="sub-head reveal">Practices I hold the line on</h3>
+    <div class="practice-grid">
+      <div class="practice reveal"><span>◆</span><div><strong>Page Object Model</strong><p>Where things are on screen never leaks into what we're checking.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Config-driven, not hard-coded</strong><p>URLs, credentials, payloads and schemas all live in <code>test_data/</code>.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Fixtures over setup code</strong><p>Scoped deliberately; <code>autouse</code> only where every test genuinely needs it.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Data-driven &amp; negative paths</strong><p>Happy path proves it works. Negative paths prove it fails <em>correctly</em>.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Parameterized SQL, always</strong><p>Never an f-string in a query. Injection-proof by construction.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Secrets hygiene</strong><p><code>.env</code> gitignored, <code>.env.example</code> committed — the habit that matters.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Structured logging</strong><p>One logger factory, console + rotating file, module name on every line.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Markers as suite slices</strong><p><code>smoke</code> in CI, <code>regression</code> nightly — same repo, different budgets.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Retry once, then believe it</strong><p>One rerun catches a network blip; a real bug still fails twice.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Cross-browser by default</strong><p>Chromium, Firefox and WebKit in the CI matrix — not a manual afterthought.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Documentation as a deliverable</strong><p>A full architecture guide, not a README with an install command.</p></div></div>
+      <div class="practice reveal"><span>◆</span><div><strong>Extensible on purpose</strong><p>New page, new endpoint, new environment or a real Postgres — each is a documented recipe.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">05 — Projects</span>
+      <h2 class="sec-title">Things I built because<br />I wanted them <span class="grad">to exist</span></h2>
+      <p class="sec-sub">All public on GitHub. Every one of them solves a problem I actually hit at work.</p>
+    </header>
+
+    <!-- featured -->
+    <article class="feature reveal">
+      <div class="feature__glow" aria-hidden="true"></div>
+      <div class="feature__body">
+        <div class="feature__head">
+          <span class="badge badge--ai">Featured · AI + Testing</span>
+          <h3>AI Test Failure Analyzer for Playwright</h3>
+          <p class="feature__lede">
+            A failed test spits out a screenshot, a video, a trace, console errors, network errors and a
+            stack trace — and a human has to open all of it to answer one question: <em>real bug, flaky
+            test, or broken locator?</em> This tool collects the whole evidence bundle automatically,
+            classifies it for free, and only calls an LLM when a human explicitly asks it to.
+          </p>
+        </div>
+
+        <div class="feature__cols">
+          <div>
+            <h4 class="mini-head">What it does</h4>
+            <ul class="ticks">
+              <li>Auto-captures screenshots, video, traces, console/network logs and stack traces on <em>every</em> failure</li>
+              <li>A free, deterministic rule-based classifier triages every failure in seconds — useful on day one, no API key needed</li>
+              <li>An opt-in AI layer (OpenAI / Claude, pluggable provider) returns a structured root-cause report: confidence, severity, suggested fix, improved locator</li>
+              <li>A Streamlit dashboard for execution summaries, failure trends and flaky-test tracking, linked to pytest-html and Allure</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mini-head">The engineering decisions</h4>
+            <ul class="ticks">
+              <li><strong>Two call sites, total.</strong> An LLM can only be invoked from one function — so “does this ever call an API automatically?” is verifiably answerable: no. CI never spends a cent.</li>
+              <li><strong>Pydantic-validated output.</strong> A schema turns “please return valid JSON” from a polite request into an enforced contract; invalid data never reaches the database.</li>
+              <li><strong>Strictly layered.</strong> Nothing in a lower layer imports from a higher one — <code>database/</code> never imports <code>dashboard/</code>.</li>
+              <li><strong><code>ast</code>-based source extraction.</strong> Only the failing test function is sent to the model, not the whole file.</li>
+              <li><strong>Constructor-injected repository.</strong> Every DB test runs against a real in-memory SQLite engine with zero mocking.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Playwright</span><span class="chip">Pytest hooks</span><span class="chip">SQLAlchemy 2.0</span>
+          <span class="chip">Pydantic</span><span class="chip">Streamlit</span><span class="chip">OpenAI / Claude</span>
+          <span class="chip">GitHub Actions</span>
+        </div>
+
+        <a class="btn btn--primary magnetic" href="https://github.com/fastasf48-hash/AI-Test-Failure-Analyzer-For-Playwright" target="_blank" rel="noopener">
+          Open on GitHub
+          <svg viewBox="0 0 24 24" class="btn__ico"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <div class="proj-grid">
+      <article class="proj reveal tilt">
+        <div class="proj__top">
+          <span class="proj__lang proj__lang--py">Python</span>
+          <a class="proj__link" href="https://github.com/fastasf48-hash/playwright-pytest-automation-framework" target="_blank" rel="noopener" aria-label="Open repository">
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
+          </a>
+        </div>
+        <h3>Playwright + Pytest Automation Framework</h3>
+        <p>The flagship. UI, API and database suites in one repo, built on POM, fixtures and parameterized data — with multi-environment config, Allure reporting and three CI targets.</p>
+        <ul class="ticks ticks--sm">
+          <li>Cross-browser CI matrix: Chromium · Firefox · WebKit</li>
+          <li>Parallel execution with group-aware scheduling</li>
+          <li>Docker + Jenkins + GitHub Actions</li>
+        </ul>
+        <div class="chips chips--sm"><span class="chip">Playwright</span><span class="chip">Pytest</span><span class="chip">Allure</span><span class="chip">Docker</span></div>
+        <a class="proj__cta" href="#framework">See the full breakdown ↑</a>
+      </article>
+
+      <article class="proj reveal tilt">
+        <div class="proj__top">
+          <span class="proj__lang proj__lang--a11y">Accessibility</span>
+          <a class="proj__link" href="https://github.com/fastasf48-hash/playwright-accessibility-toolkit" target="_blank" rel="noopener" aria-label="Open repository">
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
+          </a>
+        </div>
+        <h3>Playwright Accessibility Toolkit</h3>
+        <p>Automated WCAG scanning built on axe-core. Runs a scan mid-test, groups results by severity, and fails the build once violations cross a configurable threshold.</p>
+        <ul class="ticks ticks--sm">
+          <li>axe-core vendored directly — the injection and reporting model are owned, not borrowed</li>
+          <li><code>run_scan(page)</code> returns typed <code>Violation</code> objects; <code>assert_within_threshold</code> drops into any existing test</li>
+          <li>Filter by WCAG level via axe tags (<code>wcag2a</code>, <code>wcag2aa</code>)</li>
+          <li>Tested against two fixture pages — one clean, one deliberately broken — so it's proven not to false-positive</li>
+        </ul>
+        <div class="chips chips--sm"><span class="chip">axe-core</span><span class="chip">WCAG 2.x</span><span class="chip">Pytest</span><span class="chip">CI gating</span></div>
+        <a class="proj__cta" href="https://github.com/fastasf48-hash/playwright-accessibility-toolkit" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="proj reveal tilt">
+        <div class="proj__top">
+          <span class="proj__lang proj__lang--java">Java</span>
+          <a class="proj__link" href="https://github.com/fastasf48-hash/Selenium-FrameWork" target="_blank" rel="noopener" aria-label="Open repository">
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
+          </a>
+        </div>
+        <h3>Selenium + TestNG Framework Template</h3>
+        <p>A reusable Selenium WebDriver framework template — structure and utilities only, no product-specific tests. Fork it and start writing page objects on day one.</p>
+        <ul class="ticks ticks--sm">
+          <li><code>ThreadLocal&lt;WebDriver&gt;</code> factory, so TestNG's <code>parallel="methods"</code> is safe out of the box</li>
+          <li>Listeners for reporting, screenshot-on-failure and retry analysis</li>
+          <li><code>WaitUtils</code> / <code>ElementUtils</code> wrap explicit waits — page objects never touch raw <code>WebDriverWait</code></li>
+          <li><code>ExcelUtils.toDataProvider(...)</code> turns a spreadsheet into a TestNG <code>@DataProvider</code></li>
+        </ul>
+        <div class="chips chips--sm"><span class="chip">Java 17</span><span class="chip">Selenium 4</span><span class="chip">TestNG</span><span class="chip">ExtentReports</span><span class="chip">Log4j2</span></div>
+        <a class="proj__cta" href="https://github.com/fastasf48-hash/Selenium-FrameWork" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="proj reveal tilt">
+        <div class="proj__top">
+          <span class="proj__lang proj__lang--py">Python</span>
+          <a class="proj__link" href="https://github.com/fastasf48-hash/attendance-bot" target="_blank" rel="noopener" aria-label="Open repository">
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
+          </a>
+        </div>
+        <h3>Attendance Bot</h3>
+        <p>A small, honest piece of automation: scripted HRM mark-in and mark-out. Proof that the same browser-automation skills solve everyday problems, not just test suites.</p>
+        <div class="chips chips--sm"><span class="chip">Python</span><span class="chip">Browser automation</span><span class="chip">Scheduling</span></div>
+        <a class="proj__cta" href="https://github.com/fastasf48-hash/attendance-bot" target="_blank" rel="noopener">View repository →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION + ACHIEVEMENTS ============ -->
+<section class="section section--alt" id="education">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">06 — Education &amp; recognition</span>
+      <h2 class="sec-title">Where it started, and<br />what came <span class="grad">of it</span></h2>
+    </header>
+
+    <div class="two-col">
+      <div>
+        <h3 class="sub-head sub-head--tight reveal">Education</h3>
+        <div class="edu reveal tilt">
+          <div class="edu__row"><h4>B.Tech, Computer Science</h4><span class="edu__year">2022</span></div>
+          <p class="edu__org">Chandigarh Engineering College, Punjab</p>
+          <div class="edu__score"><span class="edu__pill">8.1 CGPA</span></div>
+        </div>
+        <div class="edu reveal tilt">
+          <div class="edu__row"><h4>Senior Secondary &amp; Secondary — CBSE</h4><span class="edu__year">2016 · 2018</span></div>
+          <p class="edu__org">DAV Dharamshala, Himachal Pradesh</p>
+          <div class="edu__score"><span class="edu__pill">10th · 2015–2016 · 9.6 CGPA</span><span class="edu__pill">12th · 2017–2018 · 81.6%</span></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="sub-head sub-head--tight reveal">Achievements</h3>
+        <div class="award reveal tilt">
+          <span class="award__ico">🏅</span>
+          <div>
+            <h4>Quality Champion</h4>
+            <p>Awarded as a fresher for a <strong>98% defect detection rate</strong> during my time as a manual tester — the year that taught me what's worth automating.</p>
+          </div>
+        </div>
+        <div class="award reveal tilt">
+          <span class="award__ico">⭐</span>
+          <div>
+            <h4>Outstanding Performer</h4>
+            <p>Awarded in <strong>two consecutive appraisal cycles</strong> for delivery on the Airport Guardian automation programme.</p>
+          </div>
+        </div>
+        <div class="award reveal tilt">
+          <span class="award__ico">🎓</span>
+          <div>
+            <h4>Team enablement</h4>
+            <p>Mentored QA engineers onto Python, Pytest and Playwright, and ran customer-support training that cut customer-reported incidents by <strong>30%</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="contact__bg" aria-hidden="true"></div>
+  <div class="container">
+    <header class="sec-head sec-head--center reveal">
+      <span class="sec-kicker">07 — Contact</span>
+      <h2 class="sec-title">Let's build a suite<br />that <span class="grad">nobody ignores</span></h2>
+      <p class="sec-sub">Open to automation engineering and SDET roles. Fastest way to reach me is email — I answer everything.</p>
+    </header>
+
+    <div class="contact__cards">
+      <a class="ccard reveal" href="mailto:fastasf48@gmail.com">
+        <span class="ccard__ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span class="ccard__k">Email</span>
+        <span class="ccard__v">fastasf48@gmail.com</span>
+        <button class="copy" type="button" data-copy="fastasf48@gmail.com" aria-label="Copy email">copy</button>
+      </a>
+
+      <a class="ccard reveal" href="tel:+917807232349">
+        <span class="ccard__ico"><svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 006.5 6.5l1.5-2 4 1.5v3a2 2 0 01-2.2 2A17 17 0 014.5 5.2 2 2 0 016.5 3z"/></svg></span>
+        <span class="ccard__k">Phone</span>
+        <span class="ccard__v">+91 78072 32349</span>
+        <button class="copy" type="button" data-copy="+917807232349" aria-label="Copy phone number">copy</button>
+      </a>
+
+      <a class="ccard reveal" href="https://www.linkedin.com/in/rahul-sharma-65093b1b9" target="_blank" rel="noopener">
+        <span class="ccard__ico"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.2 1.46-2.2 2.97V21h-4z" fill="currentColor" stroke="none"/></svg></span>
+        <span class="ccard__k">LinkedIn</span>
+        <span class="ccard__v">/in/rahul-sharma-65093b1b9</span>
+      </a>
+
+      <a class="ccard reveal" href="https://github.com/fastasf48-hash" target="_blank" rel="noopener">
+        <span class="ccard__ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0112 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0012 2z" fill="currentColor" stroke="none"/></svg></span>
+        <span class="ccard__k">GitHub</span>
+        <span class="ccard__v">@fastasf48-hash</span>
+      </a>
+    </div>
+
+    <div class="contact__cta reveal">
+      <a class="btn btn--primary btn--lg magnetic" href="mailto:fastasf48@gmail.com?subject=Opportunity%20for%20Rahul%20Sharma">
+        Start a conversation
+        <svg viewBox="0 0 24 24" class="btn__ico"><path d="M5 12h14m0 0l-5.5-5.5M19 12l-5.5 5.5"/></svg>
+      </a>
+      <a class="btn btn--ghost btn--lg magnetic" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf" download>Download résumé (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__l">
+      <span class="brand__mark brand__mark--sm" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M25 52l16 16 34-34"/></svg></span>
+      <div>
+        <strong>Rahul Sharma</strong>
+        <span>Automation Engineer · Chandigarh, India</span>
+      </div>
+    </div>
+    <div class="footer__r">
+      <a href="https://github.com/fastasf48-hash" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/rahul-sharma-65093b1b9" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:fastasf48@gmail.com">Email</a>
+      <a href="tel:+917807232349">+91 78072 32349</a>
+    </div>
+  </div>
+  <div class="container footer__meta">
+    <span>Built by hand — no page builder, no template.</span>
+    <span class="footer__status"><span class="pulse-dot"></span> All suites green</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
