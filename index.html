@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css?v=5" />
+<link rel="stylesheet" href="assets/css/style.css?v=7" />
 </head>
 
 <body>
@@ -618,24 +618,6 @@ markers =
           <p class="acc__lesson"><strong>Lesson.</strong> This was caught by running the suite in parallel while building it, not by reading the code. Code review alone would never have flagged it — the test passes perfectly in the single-worker case most people re-run to “confirm” a fix.</p>
         </div>
       </details>
-
-      <details class="acc">
-        <summary><span class="acc__tag acc__tag--blue">Git</span> <span class="acc__t">History authored under two different identities</span><span class="acc__chev">▾</span></summary>
-        <div class="acc__body">
-          <p><strong>Symptom.</strong> <code>git log</code> showed most commits under the machine's global git identity, and one — made by editing the README in GitHub's web UI — under the actual account.</p>
-          <p><strong>Fix.</strong> Set <code>user.name</code> / <code>user.email</code> <em>without</em> <code>--global</code>, scoping the identity to this repo only; then rewrote existing commit metadata with <code>git filter-branch --env-filter</code>, and cleaned up the <code>refs/original/</code> backup refs afterwards.</p>
-          <p class="acc__lesson"><strong>Lesson.</strong> Every rewritten commit gets a new SHA, because the metadata is part of what the SHA hashes. That's safe on local-only history — and a very different, much riskier call on a shared branch. Knowing which situation you're in <em>is</em> the skill.</p>
-        </div>
-      </details>
-
-      <details class="acc">
-        <summary><span class="acc__tag acc__tag--green">Craft</span> <span class="acc__t">Docstrings that read like a machine wrote them</span><span class="acc__chev">▾</span></summary>
-        <div class="acc__body">
-          <p><strong>Symptom.</strong> Docstrings across the codebase had grown into multi-sentence essays justifying design decisions inline — one class docstring spent five sentences defending an xdist decision.</p>
-          <p><strong>Fix.</strong> Rewrote every docstring across 16 files down to a single plain, present-tense sentence describing what the thing does. The reasoning didn't disappear — it moved to where it belongs: the architecture guide, and commit messages.</p>
-          <p class="acc__lesson"><strong>Lesson.</strong> Code documents <em>what</em>. Docs and commit history document <em>why</em>. Mixing the two makes both harder to read.</p>
-        </div>
-      </details>
     </div>
 
     <!-- practices -->
@@ -915,6 +897,6 @@ markers =
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=7"></script>
 </body>
 </html>

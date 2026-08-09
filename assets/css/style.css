@@ -410,8 +410,6 @@ html[data-theme="light"] .ctab.is-active{background:#0b1220}
 .acc__tag{font-family:var(--ff-m);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:6px;flex:none}
 .acc__tag--red{background:color-mix(in srgb,var(--danger) 16%,transparent);color:var(--danger)}
 .acc__tag--amber{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
-.acc__tag--blue{background:color-mix(in srgb,var(--acc-2) 16%,transparent);color:var(--acc-2)}
-.acc__tag--green{background:color-mix(in srgb,var(--pass) 16%,transparent);color:var(--pass)}
 .acc__t{flex:1;font-size:.98rem}
 .acc__chev{color:var(--tx-3);transition:transform .35s var(--ease)}
 .acc[open] .acc__chev{transform:rotate(180deg);color:var(--acc)}
