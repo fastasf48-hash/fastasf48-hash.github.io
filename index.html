@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css?v=7" />
+<link rel="stylesheet" href="assets/css/style.css?v=8" />
 </head>
 
 <body>
@@ -594,32 +594,6 @@ markers =
       </div>
     </div>
 
-    <!-- bugs -->
-    <h3 class="sub-head reveal">Real bugs I hit — and how I found them</h3>
-    <p class="sub-lede reveal">The most honest part of any project. These weren't designed in; they were debugged out.</p>
-
-    <div class="accordion reveal">
-      <details class="acc" open>
-        <summary><span class="acc__tag acc__tag--red">CI</span> <span class="acc__t">“no such table: users” — the very first CI run failed</span><span class="acc__chev">▾</span></summary>
-        <div class="acc__body">
-          <p><strong>Symptom.</strong> The first GitHub Actions run after the initial push went red. <code>gh run view --log-failed</code> showed <code>sqlite3.OperationalError: no such table: users</code>.</p>
-          <p><strong>Root cause.</strong> <code>test_data/app.db</code> is correctly gitignored — it's generated data, not source. But a fresh checkout is exactly what every CI run <em>is</em>, so <code>sqlite3.connect()</code> silently created a brand-new empty database and the first query blew up.</p>
-          <p><strong>Fix.</strong> A seed step before the test step — in all three places that run this suite from a clean checkout: the Actions workflow, the Dockerfile's <code>CMD</code>, and the Jenkinsfile.</p>
-          <p class="acc__lesson"><strong>Lesson.</strong> Anything gitignored as “generated” needs an explicit generation step wired into every environment — not a manual step documented for a human to remember.</p>
-        </div>
-      </details>
-
-      <details class="acc">
-        <summary><span class="acc__tag acc__tag--amber">Parallelism</span> <span class="acc__t">A test class that only broke when run in parallel</span><span class="acc__chev">▾</span></summary>
-        <div class="acc__body">
-          <p><strong>Symptom.</strong> Under <code>-n auto</code>, the booking lifecycle chain died with <code>AttributeError: type object 'TestBookingLifecycle' has no attribute 'booking_id'</code>. Serially, it passed every time.</p>
-          <p><strong>Root cause.</strong> <code>pytest-xdist</code> distributes tests across separate OS processes, which don't share memory. <code>test_01</code> stored the new booking id as a class attribute; when <code>test_04</code> landed on a different worker, that worker's copy of the class had never seen it.</p>
-          <p><strong>Fix.</strong> Two parts, both required: <code>@pytest.mark.xdist_group(name="booking_lifecycle")</code> on the class, <em>and</em> <code>--dist loadgroup</code> in <code>pytest.ini</code> — because the group marker is silently ignored under xdist's default scheduler.</p>
-          <p class="acc__lesson"><strong>Lesson.</strong> This was caught by running the suite in parallel while building it, not by reading the code. Code review alone would never have flagged it — the test passes perfectly in the single-worker case most people re-run to “confirm” a fix.</p>
-        </div>
-      </details>
-    </div>
-
     <!-- practices -->
     <h3 class="sub-head reveal">Practices I hold the line on</h3>
     <div class="practice-grid">
@@ -897,6 +871,6 @@ markers =
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="assets/js/main.js?v=7"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

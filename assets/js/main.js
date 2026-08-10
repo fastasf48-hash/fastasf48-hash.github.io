@@ -371,16 +371,6 @@
     });
   })();
 
-  /* ---------------- accordion: one at a time ---------------- */
-  (function accordion() {
-    const accs = $$('.acc');
-    accs.forEach(acc => {
-      acc.addEventListener('toggle', () => {
-        if (acc.open) accs.forEach(o => { if (o !== acc) o.open = false; });
-      });
-    });
-  })();
-
   /* ---------------- copy to clipboard ---------------- */
   (function copy() {
     const toast = $('#toast');
