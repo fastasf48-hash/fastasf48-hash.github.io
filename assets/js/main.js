@@ -225,7 +225,7 @@
 
     function accent() {
       return document.documentElement.getAttribute('data-theme') === 'light'
-        ? '7,154,104' : '52,227,164';
+        ? '7,154,104' : '34,197,94';
     }
 
     function frame() {
