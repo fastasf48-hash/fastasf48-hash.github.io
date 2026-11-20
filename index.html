@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css?v=12" />
+<link rel="stylesheet" href="assets/css/style.css?v=14" />
 </head>
 
 <body>
@@ -39,6 +39,7 @@
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Section navigation">
+      <a href="#impact" data-nav>Impact</a>
       <a href="#about" data-nav>About</a>
       <a href="#experience" data-nav>Experience</a>
       <a href="#skills" data-nav>Skills</a>
@@ -150,14 +151,69 @@
   </a>
 </section>
 
-<!-- ============ STATS ============ -->
-<section class="stats" aria-label="Key numbers">
-  <div class="container stats__grid">
-    <div class="stat reveal"><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__lbl">Years in QA engineering</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="14" data-suffix=" min">0</span><span class="stat__lbl">Regression runtime, down from 50</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="3" data-suffix="%">0</span><span class="stat__lbl">Flaky test rate, down from 18%</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="45" data-suffix="">0</span><span class="stat__lbl">REST endpoints automated</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="4" data-suffix=" min">0</span><span class="stat__lbl">Triage per failure, down from ~15</span></div>
+<!-- ============ IMPACT (bento) ============ -->
+<section class="section impact" id="impact" aria-labelledby="impactTitle">
+  <div class="container">
+    <header class="sec-head reveal">
+      <span class="sec-kicker">Impact</span>
+      <h2 class="sec-title" id="impactTitle">Results from the <span class="grad">Airport Guardian</span> migration</h2>
+    </header>
+
+    <div class="bento">
+      <article class="tile tile--big reveal">
+        <span class="tile__k">Regression runtime</span>
+        <p class="tile__v"><s>50</s><i aria-hidden="true">→</i>14<small> min</small></p>
+        <div class="bars" aria-hidden="true">
+          <div class="bar"><span>Selenium</span><b><i style="--w:100%"></i></b></div>
+          <div class="bar bar--new"><span>Playwright</span><b><i style="--w:28%"></i></b></div>
+        </div>
+        <p class="tile__n"><strong>72% faster</strong> across the 420-test regression suite.</p>
+      </article>
+
+      <article class="tile tile--flaky reveal">
+        <span class="tile__k">Flaky test rate</span>
+        <p class="tile__v"><s>18%</s><i aria-hidden="true">→</i>3%</p>
+        <div class="bars" aria-hidden="true">
+          <div class="bar"><b><i style="--w:100%"></i></b></div>
+          <div class="bar bar--new"><b><i style="--w:17%"></i></b></div>
+        </div>
+      </article>
+
+      <article class="tile tile--triage reveal">
+        <span class="tile__k">Triage per failure</span>
+        <p class="tile__v"><s>~15</s><i aria-hidden="true">→</i>~4<small> min</small></p>
+        <div class="bars" aria-hidden="true">
+          <div class="bar"><b><i style="--w:100%"></i></b></div>
+          <div class="bar bar--new"><b><i style="--w:27%"></i></b></div>
+        </div>
+      </article>
+
+      <article class="tile tile--mig reveal">
+        <span class="tile__k">Selenium → Playwright migration</span>
+        <p class="tile__v">180<small> of 420 tests moved</small></p>
+        <div class="seg" role="img" aria-label="180 of 420 tests migrated, 65 new tests added">
+          <i style="--w:42.9%"></i><i class="seg--new" style="--w:15.5%"></i>
+        </div>
+        <p class="tile__n">+65 new tests added along the way.</p>
+      </article>
+
+      <article class="tile tile--api reveal">
+        <span class="tile__k">REST endpoints automated</span>
+        <p class="tile__v">45</p>
+        <p class="tile__n">Schema-validated, data-driven.</p>
+      </article>
+
+      <article class="tile tile--years reveal">
+        <span class="tile__k">QA engineering</span>
+        <p class="tile__v">4+<small> years</small></p>
+        <p class="tile__n">SDET since Jul 2024.</p>
+      </article>
+
+      <article class="tile tile--stack reveal">
+        <span class="tile__k">Day-to-day stack</span>
+        <div class="chips"><span class="chip">Playwright</span><span class="chip">Python</span><span class="chip">Pytest</span><span class="chip">Jenkins</span><span class="chip">SQLAlchemy</span><span class="chip">Allure</span></div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -457,6 +513,8 @@
       </article>
     </div>
 
+    <details class="deep">
+      <summary><span>Open the full deep dive</span><small>architecture explorer · code · CI pipeline · practices</small></summary>
     <!-- explorer -->
     <h3 class="sub-head reveal">Walk the architecture</h3>
     <p class="sub-lede reveal">Click any folder or file — this is the real tree, with the real reasoning.</p>
@@ -600,6 +658,7 @@ markers =
       <div class="practice reveal"><span>◆</span><div><strong>Documentation as a deliverable</strong><p>A full architecture guide, not a README with an install command.</p></div></div>
       <div class="practice reveal"><span>◆</span><div><strong>Extensible on purpose</strong><p>New page, new endpoint, new environment or a real Postgres — each is a documented recipe.</p></div></div>
     </div>
+    </details>
   </div>
 </section>
 

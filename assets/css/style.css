@@ -567,3 +567,83 @@ html[data-theme="light"] .ctab.is-active{background:#0b1220}
   .stats__grid{grid-template-columns:1fr 1fr}
   .stat:last-child{grid-column:1/-1}
 }
+
+/* =========================================================
+   Redesign — bento layout (ui-ux-pro-max: bento-box-grid on dark slate)
+   ========================================================= */
+:root{--card-r:20px;--gap:16px}
+.cursor-glow,.hero__canvas,.hero__glow--b,.portrait__scan{display:none!important}
+.hero__glow--a{opacity:.35}
+
+/* impact bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);grid-auto-rows:minmax(150px,auto);
+  grid-template-areas:"big big flaky triage" "big big mig mig" "api years stack stack"}
+.tile{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--card-r);padding:24px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:transform .25s var(--ease),border-color .25s,background .25s}
+.tile:hover{border-color:color-mix(in srgb,var(--acc) 55%,var(--line));transform:translateY(-3px)}
+.tile--big{grid-area:big;padding:32px;justify-content:space-between;background:linear-gradient(160deg,color-mix(in srgb,var(--acc) 10%,var(--bg-2)),var(--bg-2) 60%)}
+.tile--flaky{grid-area:flaky}.tile--triage{grid-area:triage}.tile--mig{grid-area:mig}
+.tile--api{grid-area:api}.tile--years{grid-area:years}.tile--stack{grid-area:stack}
+.tile__k{font-family:var(--ff-m);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3)}
+.tile__v{font-family:var(--ff-h);font-weight:700;font-size:clamp(2rem,3.4vw,2.8rem);letter-spacing:-.03em;line-height:1.05;color:var(--tx)}
+.tile--big .tile__v{font-size:clamp(3rem,6vw,5.2rem)}
+.tile__v s{color:var(--tx-3);text-decoration:none;opacity:.8}
+.tile__v i{font-style:normal;color:var(--acc);margin:0 .22em;font-weight:500}
+.tile__v small{font-size:.38em;font-weight:500;color:var(--tx-2);letter-spacing:0;margin-left:.2em}
+.tile__n{color:var(--tx-2);font-size:.92rem;line-height:1.5}
+.tile__n strong{color:var(--acc);font-weight:600}
+.bars{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.bar{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:10px;font-family:var(--ff-m);font-size:.72rem;color:var(--tx-3)}
+.bar span{min-width:76px}
+.bar:not(:has(span)){grid-template-columns:1fr}
+.bar b{display:block;height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.bar b i{display:block;height:100%;width:0;border-radius:99px;background:var(--tx-3);transition:width 1.1s var(--ease) .2s}
+.bar--new b i{background:var(--grad)}
+.reveal.in .bar b i{width:var(--w)}
+.seg{display:flex;gap:3px;height:10px;border-radius:99px;overflow:hidden;background:var(--surface-2);margin-top:auto}
+.seg i{display:block;height:100%;width:0;background:var(--grad);transition:width 1.1s var(--ease) .2s}
+.seg i.seg--new{background:var(--acc-3)}
+.reveal.in .seg i{width:var(--w)}
+
+/* skills bento */
+.skill-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--gap)}
+.skill-grid>*{grid-column:span 2;border-radius:var(--card-r)}
+.skill-grid>:nth-child(2){grid-column:span 4}
+.skill-grid>:nth-child(3),.skill-grid>:nth-child(4),.skill-grid>:nth-child(8),.skill-grid>:nth-child(9){grid-column:span 3}
+
+/* projects bento */
+.proj-grid{grid-template-columns:repeat(6,1fr);gap:var(--gap)}
+.proj-grid>*{grid-column:span 3;border-radius:var(--card-r)}
+.feature{border-radius:var(--card-r)}
+.proj:hover,.skill-card:hover{border-color:color-mix(in srgb,var(--acc) 50%,var(--line))}
+
+/* framework deep dive */
+.deep{margin-top:40px;border:1px solid var(--line);border-radius:var(--card-r);background:var(--bg)}
+.deep>summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:20px 24px;font-weight:600;min-height:44px}
+.deep>summary::-webkit-details-marker{display:none}
+.deep>summary::before{content:"+";font-family:var(--ff-m);color:var(--acc);font-size:1.3rem;width:1.2em}
+.deep[open]>summary::before{content:"–"}
+.deep>summary small{font-family:var(--ff-m);color:var(--tx-3);font-size:.78rem;font-weight:400}
+.deep>*:not(summary){padding-inline:clamp(16px,3vw,28px)}
+.deep>*:last-child{padding-bottom:28px}
+.deep:not([open])>summary:hover{background:var(--surface)}
+
+@media (max-width:1024px){
+  .bento{grid-template-columns:repeat(2,1fr);grid-template-areas:"big big" "flaky triage" "mig mig" "api years" "stack stack"}
+  .skill-grid{grid-template-columns:repeat(2,1fr)}
+  .skill-grid>*,.skill-grid>:nth-child(n){grid-column:span 1}
+  .skill-grid>:nth-child(2){grid-column:span 2}
+  .proj-grid>*{grid-column:span 6}
+}
+@media (max-width:560px){
+  .bento{grid-template-columns:1fr;grid-template-areas:"big" "flaky" "triage" "mig" "api" "years" "stack"}
+  .skill-grid{grid-template-columns:1fr}
+  .skill-grid>*,.skill-grid>:nth-child(n),.skill-grid>:nth-child(2){grid-column:span 1}
+  .tile--big{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .tile,.bar b i,.seg i{transition:none}
+  .tile:hover{transform:none}
+  .bar b i,.seg i{width:var(--w)}
+}
+
+.tile:not(.tile--big) .tile__v{font-size:clamp(1.7rem,2.5vw,2.3rem);white-space:nowrap}
