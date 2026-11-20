@@ -131,6 +131,7 @@
       'API suites with real schema validation.',
       'CI/CD pipelines that answer in minutes.',
       'Page objects a whole team can extend.',
+      'LLM-assisted triage for failed tests.',
       'test coverage across UI, API and DB.'
     ];
     if (reduced) { el.textContent = words[0]; return; }
