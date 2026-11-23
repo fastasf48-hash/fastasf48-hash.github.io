@@ -3,22 +3,34 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rahul Sharma — SDET / Test Automation Engineer</title>
-<meta name="description" content="Rahul Sharma — Software Engineer II (SDET) with 4+ years in QA. Migrated a 420-test Selenium suite to Playwright + Python, cutting regression from 50 to 14 minutes, and built an LLM-assisted failure analyzer." />
+<title>Rahul Sharma | SDET / Test Automation Engineer</title>
+<meta name="description" content="Rahul Sharma, Software Engineer II (SDET) with 4+ years in QA. Migrated a 420-test Selenium suite to Playwright + Python, cutting regression from 50 to 14 minutes, and built an LLM-assisted failure analyzer." />
 <meta name="author" content="Rahul Sharma" />
-<meta name="theme-color" content="#fafafa" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Rahul Sharma — SDET / Test Automation Engineer" />
+<meta property="og:title" content="Rahul Sharma | SDET / Test Automation Engineer" />
 <meta property="og:description" content="Playwright · Python · Pytest · CI/CD. Regression cut from 50 to 14 minutes, flaky rate from 18% to 3%." />
 <meta property="og:image" content="assets/img/rahul-formal.jpg" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2318181b'/%3E%3Cpath d='M25 52l16 16 34-34' stroke='%23ffffff' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23171717'/%3E%3Cpath d='M25 52l16 16 34-34' stroke='%23ffffff' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<script>
+(function () {
+  var t = null;
+  try { t = localStorage.getItem('theme'); } catch (e) {}
+  if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
+})();
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css?v=23" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css?v=24" />
 </head>
 
 <body>
@@ -26,7 +38,7 @@
 
 <header class="top">
   <div class="wrap top__in">
-    <a href="#top" class="logo" aria-label="Rahul Sharma — home">
+    <a href="#top" class="logo" aria-label="Rahul Sharma, home">
       <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M25 52l16 16 34-34"/></svg></span>
       Rahul Sharma
     </a>
@@ -37,25 +49,30 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn--dark btn--sm" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf?v=9" download>Resume</a>
+    <div class="top__actions">
+      <button type="button" class="btn btn--ghost btn--icon" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf?v=9" download>Resume</a>
+    </div>
   </div>
 </header>
 
 <main id="main">
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap hero__in">
     <div class="hero__text">
-      <p class="status"><span class="status__dot" aria-hidden="true"></span>Software Engineer II · SDET at Alert Enterprise</p>
+      <p class="badge badge--outline status"><span class="status__dot" aria-hidden="true"></span>Software Engineer II · SDET at Alert Enterprise</p>
       <h1>Test automation that teams can actually trust.</h1>
       <p class="lede">
         I'm Rahul, an SDET with 4+ years in QA engineering. I design Playwright, Python and Pytest
         frameworks, migrate Selenium suites onto them, and run regression through Jenkins. Based in Chandigarh, India.
       </p>
       <div class="actions">
-        <a class="btn btn--dark" href="#projects">See my projects</a>
-        <a class="btn btn--line" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf?v=9" download>Download resume</a>
+        <a class="btn btn--primary btn--lg" href="#projects">See my projects</a>
+        <a class="btn btn--outline btn--lg" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf?v=9" download>Download resume</a>
       </div>
     </div>
 
@@ -66,20 +83,19 @@
 
   <div class="wrap">
     <dl class="proof" aria-label="Key results">
-      <div><dt>Regression runtime</dt><dd><s>50</s> → 14 <small>min</small></dd></div>
-      <div><dt>Flaky test rate</dt><dd><s>18%</s> → 3%</dd></div>
-      <div><dt>Triage per failure</dt><dd><s>~15</s> → ~4 <small>min</small></dd></div>
-      <div><dt>REST endpoints automated</dt><dd>45</dd></div>
+      <div class="stat"><dt>Regression runtime</dt><dd><s>50</s> → 14 <small>min</small></dd></div>
+      <div class="stat"><dt>Flaky test rate</dt><dd><s>18%</s> → 3%</dd></div>
+      <div class="stat"><dt>Triage per failure</dt><dd><s>~15</s> → ~4 <small>min</small></dd></div>
+      <div class="stat"><dt>REST endpoints automated</dt><dd>45</dd></div>
     </dl>
   </div>
 </section>
 
-<!-- WORK -->
 <section class="sec" id="work">
   <div class="wrap">
     <header class="sec__head">
       <h2>Experience</h2>
-      <p>Alert Enterprise, Chandigarh — enterprise physical and cyber identity security.</p>
+      <p>Alert Enterprise, Chandigarh. Enterprise physical and cyber identity security.</p>
     </header>
 
     <article class="job reveal">
@@ -88,7 +104,7 @@
         <p class="job__org">Alert Enterprise</p>
       </div>
       <div class="job__body">
-        <h3>Software Engineer II — SDET / Test Automation</h3>
+        <h3>Software Engineer II, SDET / Test Automation</h3>
         <ul>
           <li>Led the migration of the <strong>420-test Selenium regression suite</strong> for Airport Guardian, an enterprise airport access-control product, to Playwright + Python + Pytest. 180 tests migrated so far and 65 new ones added, <strong>cutting regression from 50 to 14 minutes</strong>.</li>
           <li>Designed the replacement framework (Page Object Model, scoped Pytest fixtures, parameterized data) so UI and API suites share one codebase. <strong>Flaky test rate fell from 18% to 3%</strong>.</li>
@@ -106,7 +122,7 @@
         <p class="job__org">Alert Enterprise</p>
       </div>
       <div class="job__body">
-        <h3>Software Engineer I — QA / Test Automation</h3>
+        <h3>Software Engineer I, QA / Test Automation</h3>
         <ul>
           <li>Built Selenium (Java) automation for critical regression scenarios on Airport Guardian, a PIAM product running on Apache NiFi, Apache ZooKeeper, Tomcat and Microsoft SQL Server.</li>
           <li>Designed and executed test cases for complex PIAM workflows and triaged defects.</li>
@@ -117,8 +133,7 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="sec sec--tint" id="projects">
+<section class="sec sec--muted" id="projects">
   <div class="wrap">
     <header class="sec__head">
       <h2>Selected projects</h2>
@@ -127,66 +142,90 @@
 
     <div class="cards">
       <article class="card card--wide reveal">
-        <p class="card__tag">AI + testing</p>
-        <h3>AI Test Failure Analyzer for Playwright</h3>
-        <p>A failed test leaves a screenshot, video, trace, logs and a stack trace, and someone has to open all of it to decide whether it's a real bug, a flaky test or a broken locator. This tool captures the evidence automatically, classifies it with a deterministic rule set first, and only calls an LLM when asked.</p>
-        <ul class="card__list">
+        <div class="card__header">
+          <span class="badge badge--secondary">AI + testing</span>
+          <h3 class="card__title">AI Test Failure Analyzer for Playwright</h3>
+          <p class="card__description">A failed test leaves a screenshot, video, trace, logs and a stack trace, and someone has to open all of it to decide whether it's a real bug, a flaky test or a broken locator. This tool captures the evidence automatically, classifies it with a deterministic rule set first, and only calls an LLM when asked.</p>
+        </div>
+        <ul class="card__content list">
           <li>Opt-in LLM layer returns a Pydantic-validated root-cause report: category, confidence, severity, suggested fix.</li>
           <li>The LLM can only be invoked from one function, so CI never makes an API call on its own.</li>
           <li>Streamlit dashboard over SQLAlchemy 2.0 for failure trends and flaky-test tracking.</li>
         </ul>
-        <p class="tags"><span>Playwright</span><span>Pytest</span><span>SQLAlchemy</span><span>Pydantic</span><span>Streamlit</span></p>
-        <a class="card__link" href="https://github.com/fastasf48-hash/AI-Test-Failure-Analyzer-For-Playwright" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+        <div class="card__footer">
+          <p class="tags"><span class="badge badge--outline">Playwright</span><span class="badge badge--outline">Pytest</span><span class="badge badge--outline">SQLAlchemy</span><span class="badge badge--outline">Pydantic</span><span class="badge badge--outline">Streamlit</span></p>
+          <a class="btn btn--outline btn--sm" href="https://github.com/fastasf48-hash/AI-Test-Failure-Analyzer-For-Playwright" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
       </article>
 
       <article class="card reveal">
-        <p class="card__tag">Framework</p>
-        <h3>Playwright + Pytest Automation Framework</h3>
-        <p>UI, REST API and database suites in one repository with a shared BasePage, a CRUD and token-auth API lifecycle, SQLite validation and Allure reporting.</p>
-        <ul class="card__list">
+        <div class="card__header">
+          <span class="badge badge--secondary">Framework</span>
+          <h3 class="card__title">Playwright + Pytest Automation Framework</h3>
+          <p class="card__description">UI, REST API and database suites in one repository with a shared BasePage, a CRUD and token-auth API lifecycle, SQLite validation and Allure reporting.</p>
+        </div>
+        <ul class="card__content list">
           <li>Parallel xdist runs across Chromium, Firefox and WebKit.</li>
           <li>GitHub Actions, Docker and Jenkins pipelines.</li>
         </ul>
-        <p class="tags"><span>Playwright</span><span>Pytest</span><span>Allure</span><span>Docker</span></p>
-        <a class="card__link" href="https://github.com/fastasf48-hash/playwright-pytest-automation-framework" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+        <div class="card__footer">
+          <p class="tags"><span class="badge badge--outline">Playwright</span><span class="badge badge--outline">Pytest</span><span class="badge badge--outline">Allure</span><span class="badge badge--outline">Docker</span></p>
+          <a class="btn btn--outline btn--sm" href="https://github.com/fastasf48-hash/playwright-pytest-automation-framework" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
       </article>
 
       <article class="card reveal">
-        <p class="card__tag">Accessibility</p>
-        <h3>Playwright Accessibility Toolkit</h3>
-        <p>WCAG 2.x scanning on axe-core. Violations are grouped by severity, and a threshold assertion fails the build when they cross a limit.</p>
-        <ul class="card__list">
+        <div class="card__header">
+          <span class="badge badge--secondary">API testing</span>
+          <h3 class="card__title">Restful Booker API Automation</h3>
+          <p class="card__description">Postman, Newman and SoapUI suites against the Restful Booker API, run in GitHub Actions on every push and once a day.</p>
+        </div>
+        <ul class="card__content list">
+          <li>CRUD chain with JSON schema checks, token auth and 11 negative tests.</li>
+          <li>SoapUI property transfers, 20-row data-driven run and a 50-user load test.</li>
+          <li>Six defects logged with steps, severity and impact.</li>
+        </ul>
+        <div class="card__footer">
+          <p class="tags"><span class="badge badge--outline">Postman</span><span class="badge badge--outline">Newman</span><span class="badge badge--outline">SoapUI</span><span class="badge badge--outline">GitHub Actions</span></p>
+          <a class="btn btn--outline btn--sm" href="https://github.com/fastasf48-hash/API-Automation-RestfulBooker" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__header">
+          <span class="badge badge--secondary">Accessibility</span>
+          <h3 class="card__title">Playwright Accessibility Toolkit</h3>
+          <p class="card__description">WCAG 2.x scanning on axe-core. Violations are grouped by severity, and a threshold assertion fails the build when they cross a limit.</p>
+        </div>
+        <ul class="card__content list">
           <li>Typed violation objects that drop into any existing test.</li>
           <li>Filter by WCAG level through axe tags.</li>
         </ul>
-        <p class="tags"><span>axe-core</span><span>WCAG 2.x</span><span>Pytest</span></p>
-        <a class="card__link" href="https://github.com/fastasf48-hash/playwright-accessibility-toolkit" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+        <div class="card__footer">
+          <p class="tags"><span class="badge badge--outline">axe-core</span><span class="badge badge--outline">WCAG 2.x</span><span class="badge badge--outline">Pytest</span></p>
+          <a class="btn btn--outline btn--sm" href="https://github.com/fastasf48-hash/playwright-accessibility-toolkit" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
       </article>
 
       <article class="card reveal">
-        <p class="card__tag">Java</p>
-        <h3>Selenium + TestNG Framework Template</h3>
-        <p>A reusable Selenium and Java framework template: structure and utilities only, no product-specific tests.</p>
-        <ul class="card__list">
+        <div class="card__header">
+          <span class="badge badge--secondary">Java</span>
+          <h3 class="card__title">Selenium + TestNG Framework Template</h3>
+          <p class="card__description">A reusable Selenium and Java framework template: structure and utilities only, no product-specific tests.</p>
+        </div>
+        <ul class="card__content list">
           <li>ThreadLocal WebDriver factory for safe parallel TestNG runs.</li>
           <li>Listeners for reporting, screenshots on failure and retries.</li>
         </ul>
-        <p class="tags"><span>Java 17</span><span>Selenium 4</span><span>TestNG</span></p>
-        <a class="card__link" href="https://github.com/fastasf48-hash/Selenium-FrameWork" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
-      </article>
-
-      <article class="card reveal">
-        <p class="card__tag">Python</p>
-        <h3>Attendance Bot</h3>
-        <p>Scripted HRM mark-in and mark-out. A small piece of automation to show the same browser skills solve everyday problems, not just test suites.</p>
-        <p class="tags"><span>Python</span><span>Browser automation</span></p>
-        <a class="card__link" href="https://github.com/fastasf48-hash/attendance-bot" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+        <div class="card__footer">
+          <p class="tags"><span class="badge badge--outline">Java 17</span><span class="badge badge--outline">Selenium 4</span><span class="badge badge--outline">TestNG</span></p>
+          <a class="btn btn--outline btn--sm" href="https://github.com/fastasf48-hash/Selenium-FrameWork" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section class="sec" id="skills">
   <div class="wrap">
     <header class="sec__head">
@@ -197,18 +236,17 @@
     <dl class="skills reveal">
       <div><dt>Automation</dt><dd>Playwright, Selenium WebDriver, Pytest (fixtures, markers, parameterization, hooks), TestNG, Page Object Model, pytest-xdist</dd></div>
       <div><dt>Languages</dt><dd>Python, Java, SQL</dd></div>
-      <div><dt>API</dt><dd>REST, Requests, Playwright APIRequestContext, JSON Schema (jsonschema), Faker, Basic and Bearer token auth</dd></div>
+      <div><dt>API</dt><dd>REST, Requests, Playwright APIRequestContext, Postman, Newman, SoapUI, JSON Schema (jsonschema), Faker, Basic and Bearer token auth</dd></div>
       <div><dt>CI/CD</dt><dd>Jenkins, GitHub Actions, Docker, Git</dd></div>
       <div><dt>Database</dt><dd>Microsoft SQL Server, PostgreSQL, MySQL, SQLite, SQLAlchemy</dd></div>
-      <div><dt>Reporting</dt><dd>Allure, pytest-html, JIRA, screenshot / video / trace capture on failure</dd></div>
-      <div><dt>Testing</dt><dd>Regression, end-to-end, UI, API and database testing; cross-browser (Chromium, Firefox, WebKit); data-driven and parallel execution; test strategy; defect triage; Agile / Scrum</dd></div>
+      <div><dt>Reporting</dt><dd>Allure, pytest-html, newman-reporter-htmlextra, JIRA, screenshot / video / trace capture on failure</dd></div>
+      <div><dt>Testing</dt><dd>Regression, end-to-end, UI, API and database testing; cross-browser (Chromium, Firefox, WebKit); data-driven and parallel execution; load testing; test strategy; defect triage; Agile / Scrum</dd></div>
       <div><dt>AI-augmented testing</dt><dd>LLM-based failure triage, Pydantic-validated structured outputs</dd></div>
     </dl>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="sec sec--tint" id="about">
+<section class="sec sec--muted" id="about">
   <div class="wrap about">
     <div class="about__text">
       <h2>About</h2>
@@ -216,13 +254,13 @@
       <p>Today I work as an SDET on Airport Guardian. I led the move of its Selenium regression suite to Playwright, Python and Pytest, and built an LLM-assisted analyzer that makes failure triage much faster. I care most about frameworks that a whole team can extend without breaking each other's tests.</p>
 
       <h3>Education</h3>
-      <p><strong>B.Tech, Computer Science</strong> — Chandigarh Engineering College, Punjab · 2022 · 8.1 CGPA<br />
+      <p><strong>B.Tech, Computer Science</strong>, Chandigarh Engineering College, Punjab · 2022 · 8.1 CGPA<br />
       <span class="muted">CBSE Class X (9.2 CGPA) and Class XII (81.6%), DAV Dharamshala, Himachal Pradesh</span></p>
 
       <h3>Recognition</h3>
       <ul class="plain">
-        <li><strong>Quality Champion</strong> — 98% defect detection rate as a fresher on Airport Guardian.</li>
-        <li><strong>Outstanding Performer</strong> — two consecutive appraisal cycles for the Airport Guardian automation programme.</li>
+        <li><strong>Quality Champion</strong>: 98% defect detection rate as a fresher on Airport Guardian.</li>
+        <li><strong>Outstanding Performer</strong>: two consecutive appraisal cycles for the Airport Guardian automation programme.</li>
       </ul>
     </div>
     <figure class="about__photo">
@@ -231,17 +269,16 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="sec contact" id="contact">
   <div class="wrap">
     <h2>Let's talk.</h2>
     <p class="contact__lede">Open to SDET and test automation roles. Email is the fastest way to reach me.</p>
     <p class="contact__mail"><a href="mailto:fastasf48@gmail.com">fastasf48@gmail.com</a></p>
     <ul class="contact__links">
-      <li><a href="https://www.linkedin.com/in/rahul-sharma-65093b1b9" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://github.com/fastasf48-hash" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="tel:+917807232349">+91 78072 32349</a></li>
-      <li><a href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf?v=9" download>Resume (PDF)</a></li>
+      <li><a class="btn btn--outline" href="https://www.linkedin.com/in/rahul-sharma-65093b1b9" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="btn btn--outline" href="https://github.com/fastasf48-hash" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a class="btn btn--outline" href="tel:+917807232349">+91 78072 32349</a></li>
+      <li><a class="btn btn--outline" href="assets/Rahul_Sharma_Automation_Engineer_Resume.pdf?v=9" download>Resume (PDF)</a></li>
     </ul>
   </div>
 </section>
@@ -255,6 +292,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20"></script>
+<script src="assets/js/main.js?v=21"></script>
 </body>
 </html>
